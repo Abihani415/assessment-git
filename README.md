@@ -3,7 +3,7 @@
 An application for fetching details of any Github handle.
 In this project we have used following dependencies.
 
-For Server
+## For Server
 
 | Package                | Version |
 | ---------------------- | ------- |
@@ -18,7 +18,7 @@ For Server
 | jest                   | 27.4.5  |
 | supertest              | 6.1.6   |
 
-For Client
+## For Client
 
 | Package                   | Version |
 | ------------------------- | ------- |
@@ -33,45 +33,7 @@ For Client
 | msw                       | 0.36.3  |
 | react-router-dom          | 6.2.1   |
 
-## Swagger API Reference
-
-Swagger API can be accessed from [http://127.0.0.1:3001/api-docs]()
-
-## Install MongoDB
-
-https://www.mongodb.com/try/download/community?tck=docs_server
-
-#### Get user details
-
-```http
-
-GET /api/v1/fetch-user/:username
-
-```
-
-| Parameter | Type | Description |
-
-| `username` | `string` | **Required**. Github username |
-
-#### Get user repositories
-
-```http
-
-GET api/v1/fetch-repos/:handle
-
-```
-
-| Parameter | Type | Description |
-
-| `handle` | `string` | **Required**. Github handle (username) to fetch repo |
-
-## Environment Variables
-
-To run this project, you will need to add the following environment variables to your server `.env` file
-
-`MONGO_DB_URI`
-
-## Run Locally
+## Project Setup
 
 #### Clone the project
 
@@ -91,13 +53,21 @@ cd assessment-git
 
 #### Install dependencies
 
-##### Install both client and server side dependencies with npm
-
 ```bash
 
 npm run installpkg
 
 ```
+
+## Install MongoDB
+
+https://www.mongodb.com/try/download/community?tck=docs_server
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your server `.env` file
+
+`MONGO_DB_URI`
 
 #### Start the server
 
@@ -107,12 +77,46 @@ npm run dev
 
 ```
 
-#### Test the server
+#### project will start at `http://127.0.0.1:3000`
+
+#### Run test cases
 
 ```bash
 
 npm run test-dev
 ```
+
+## Swagger API Reference
+
+Swagger API can be accessed from `http://127.0.0.1:3001/api-docs`
+
+## Postman collection Reference
+
+File `Assessment Git.postman_collection.json` is at root folder
+
+#### Get user details
+
+```http
+
+GET /api/v1/fetch-user/:username
+
+```
+
+| Parameter  | Type     | Description                   |
+| ---------- | -------- | ----------------------------- |
+| `username` | `string` | **Required**. Github username |
+
+#### Get user repositories
+
+```http
+
+GET api/v1/fetch-repos/:handle
+
+```
+
+| Parameter | Type     | Description                           |
+| --------- | -------- | ------------------------------------- |
+| `handle`  | `string` | **Required**. Github handle/ username |
 
 ## Future enhancement
 
@@ -120,6 +124,16 @@ npm run test-dev
 - can write more test cases
 - can do ui/ux improvements
 - add internal process, so that it sync GIT updates of that user and handle to our database
+
+### UI Demo
+
+#### User page
+
+![user](https://user-images.githubusercontent.com/96728968/148246865-0a3381e6-d541-4991-a32c-d926856619e6.png)
+
+#### repos page
+
+![repos](https://user-images.githubusercontent.com/96728968/148247257-68ad4e62-7c9e-4d46-8d75-6e72fd6ab864.png)
 
 ## Author
 
