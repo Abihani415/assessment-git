@@ -1,0 +1,160 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Git Assignment",
+    "description": "APIs to fetch GIT user and repos",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "127.0.0.1:3001/",
+  "basePath": "api/v1/",
+  "tags": [
+    {
+      "name": "User",
+      "description": "API to fetch user from github"
+    },
+    {
+      "name": "Repos",
+      "description": "API to fetch repos from github"
+    }
+  ],
+  "paths": {
+    "/fetch-user/{username}": {
+      "parameters": [
+        {
+          "name": "username",
+          "in": "path",
+          "required": true,
+          "description": "username of user that we want to find",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "tags": ["User"],
+        "summary": "Get user in system",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "422": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/Error-422"
+            }
+          }
+        }
+      }
+    },
+    "/fetch-repos/{handle}": {
+      "parameters": [
+        {
+          "name": "handle",
+          "in": "path",
+          "required": true,
+          "description": "handle of user that we want to find",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "tags": ["Repos"],
+        "summary": "Get repos in system",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Repos"
+            }
+          },
+          "422": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/Error-422"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "User": {
+      "properties": {
+        "_id": {
+          "type": "integer",
+          "uniqueItems": true
+        },
+        "name": {
+          "type": "string"
+        },
+        "image": {
+          "type": "string"
+        },
+        "follower": {
+          "type": "integer"
+        },
+        "following": {
+          "type": "integer"
+        },
+        "repo_count": {
+          "type": "integer"
+        },
+        "profile_url": {
+          "type": "string"
+        },
+        "member_since": {
+          "type": "string"
+        }
+      }
+    },
+    "Repo": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "owner_name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "repo_url": {
+          "type": "integer"
+        },
+        "stars": {
+          "type": "integer"
+        }
+      }
+    },
+    "Repos": {
+      "properties": {
+        "repos": {
+          "type": "array",
+          "$ref": "#/definitions/Repo"
+        }
+      }
+    },
+    "Error": {
+      "properties": {
+        "message": {
+          "type": "string"
+        }
+      }
+    },
+    "Error-422": {
+      "properties": {
+        "errors": {
+          "type": "array",
+          "$ref": "#/definitions/Error"
+        }
+      }
+    }
+  },
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"]
+}

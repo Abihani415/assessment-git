@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "7c5afc7a-8e4b-4339-b309-67e57da7ad3d",
+		"name": "Assessment Git",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Fetch User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": [
+				{
+					"name": "Fetch User",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}fetch-user/ankitbihani415",
+							"host": [
+								"{{baseUrl}}fetch-user"
+							],
+							"path": [
+								"ankitbihani415"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "350"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"15e-dOOyeTwPWmgRwnmzUELbK0nsrhc\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 Jan 2022 13:07:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"_id\": \"61d5437234140583a1c49844\",\n        \"name\": \"ankitbihani415\",\n        \"image\": \"https://avatars.githubusercontent.com/u/66110273?v=4\",\n        \"follower\": 0,\n        \"following\": 0,\n        \"repo_count\": 7,\n        \"member_since\": \"2020-05-29T07:10:54.000Z\",\n        \"profile_url\": \"https://github.com/ankitbihani415\",\n        \"createdAt\": \"2022-01-05T07:06:26.847Z\",\n        \"updatedAt\": \"2022-01-05T07:06:26.847Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Fetch Repos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": [
+				{
+					"name": "Fetch Repos",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}fetch-repos/apache",
+							"host": [
+								"{{baseUrl}}fetch-repos"
+							],
+							"path": [
+								"apache"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1589"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"635-frLRJbHNtA4Gulmtg2oXBHtkvpU\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 Jan 2022 14:20:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"repos\": [\n        {\n            \"name\": \".github\",\n            \"owner_name\": \"apache\",\n            \"stars\": 4,\n            \"description\": null,\n            \"repo_url\": \"https://github.com/apache/.github\"\n        },\n        {\n            \"name\": \"abdera\",\n            \"owner_name\": \"apache\",\n            \"stars\": 16,\n            \"description\": \"Mirror of Apache Abdera\",\n            \"repo_url\": \"https://github.com/apache/abdera\"\n        },\n        {\n            \"name\": \"accumulo\",\n            \"owner_name\": \"apache\",\n            \"stars\": 900,\n            \"description\": \"Apache Accumulo\",\n            \"repo_url\": \"https://github.com/apache/accumulo\"\n        },\n        {\n            \"name\": \"accumulo-bsp\",\n            \"owner_name\": \"apache\",\n            \"stars\": 2,\n            \"description\": \"Apache Accumulo BSP\",\n            \"repo_url\": \"https://github.com/apache/accumulo-bsp\"\n        },\n        {\n            \"name\": \"accumulo-classloaders\",\n            \"owner_name\": \"apache\",\n            \"stars\": 2,\n            \"description\": \"Apache Accumulo Classloader Extras\",\n            \"repo_url\": \"https://github.com/apache/accumulo-classloaders\"\n        },\n        {\n            \"name\": \"accumulo-docker\",\n            \"owner_name\": \"apache\",\n            \"stars\": 17,\n            \"description\": \"Apache Accumulo Docker\",\n            \"repo_url\": \"https://github.com/apache/accumulo-docker\"\n        },\n        {\n            \"name\": \"accumulo-examples\",\n            \"owner_name\": \"apache\",\n            \"stars\": 31,\n            \"description\": \"Apache Accumulo Examples\",\n            \"repo_url\": \"https://github.com/apache/accumulo-examples\"\n        },\n        {\n            \"name\": \"accumulo-instamo-archetype\",\n            \"owner_name\": \"apache\",\n            \"stars\": 3,\n            \"description\": \"Apache Accumulo Instamo Archetype\",\n            \"repo_url\": \"https://github.com/apache/accumulo-instamo-archetype\"\n        },\n        {\n            \"name\": \"accumulo-maven-plugin\",\n            \"owner_name\": \"apache\",\n            \"stars\": 5,\n            \"description\": \"Apache Accumulo Maven Plugin for Accumulo 2.x\",\n            \"repo_url\": \"https://github.com/apache/accumulo-maven-plugin\"\n        },\n        {\n            \"name\": \"accumulo-pig\",\n            \"owner_name\": \"apache\",\n            \"stars\": 3,\n            \"description\": \"Apache Accumulo Pig\",\n            \"repo_url\": \"https://github.com/apache/accumulo-pig\"\n        }\n    ],\n    \"page\": 1,\n    \"limit\": 10,\n    \"totalPages\": 230\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://127.0.0.1:3001/api/v1/"
+		}
+	]
+}
