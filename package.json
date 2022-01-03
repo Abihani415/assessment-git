@@ -1,0 +1,52 @@
+{
+  "name": "git-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d dist",
+    "lint": "eslint 'src'",
+    "start": "npm run build && node dist/index.js",
+    "server": "npm run build && node dist/index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently -n 'server,client' -c 'red,green' \"npm run server\" \"npm run client\"",
+    "test": "jest --config ./jest.config.json",
+    "dev-test": "concurrently -n 'server,client' -c 'red,green' \"npm run test\" \"npm run test --prefix client\"",
+    "preinstallpkg": "npm install concurrently",
+    "installpkg": "concurrently -n 'server,client' -c 'red,green' \"npm i\" \"cd client && npm i\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "express": "^4.17.2",
+    "express-validator": "^6.14.0",
+    "mongoose": "^6.1.4",
+    "mongoose-paginate-v2": "^1.4.2",
+    "node-fetch": "^2.6.6",
+    "swagger-ui-express": "^4.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.7",
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
+    "babel-node": "^0.0.1-security",
+    "babel-preset-airbnb": "^5.0.0",
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "jest": "^27.4.5",
+    "prettier": "2.5.1",
+    "supertest": "^6.1.6"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
+}
