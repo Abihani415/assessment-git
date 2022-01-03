@@ -1,0 +1,12 @@
+.card .card-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.card .card-title .date {
+  font-weight: 300;
+  font-size: 12px;
+}
+.card .card-body {
+  font-size: 14px;
+}

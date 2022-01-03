@@ -1,0 +1,20 @@
+.repo-wrapper {
+  margin: auto;
+  width: 40em;
+  font-size: 1rem;
+  background: #fff;
+  border-radius: 0.3em;
+}
+.repo_desc {
+  text-align: left;
+  font-size: 14px;
+}
+.reponame {
+  font-size: 14px;
+}
+.reponame a {
+  text-decoration: underline !important;
+}
+.card-heading {
+  font-weight: 600;
+}
