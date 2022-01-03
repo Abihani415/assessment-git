@@ -114,7 +114,7 @@ npm run dev
 npm run test-dev
 ```
 
-## Future inhancement
+## Future enhancement
 
 - can use typescript
 - can write more test cases
