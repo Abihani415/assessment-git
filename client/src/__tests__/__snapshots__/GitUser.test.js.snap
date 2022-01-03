@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Take GitUser Component snapshot User Detail 1`] = `
+<div
+  class="card"
+  data-testid="user-profile-test-id"
+>
+  <div
+    class="d-flex align-items-center p-3 flex-column"
+  >
+    <a
+      href="https://github.com/ankitbihani415"
+      rel="noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="ankitbihani415"
+        class="card-img avatar"
+        src="https://avatars.githubusercontent.com/u/66110273?v=4"
+      />
+    </a>
+    <div
+      class="mb-4 mt-3 card-title h5"
+    >
+      ankitbihani415
+      <div
+        class="date"
+      >
+        29/5/2020
+      </div>
+    </div>
+  </div>
+  <div
+    class="border-top p-2 card-body"
+  >
+    <div
+      class="d-flex align-items-center justify-content-between"
+    >
+      <div>
+        <span>
+          Follower: 
+          0
+        </span>
+      </div>
+      <div>
+        <span>
+          Following: 
+          0
+        </span>
+      </div>
+      <div>
+        <span>
+          Total Repo: 
+          7
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
